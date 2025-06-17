@@ -43,6 +43,10 @@
 
 ## Reference Site
 
+-   [FastAPI](https://fastapi.tiangolo.com/)
+-   [SQLAlchemy](https://docs.sqlalchemy.org/)
+-   [MySQL](https://dev.mysql.com/doc/)
+-   [Pydantic](https://docs.pydantic.dev/)
 -   [Design System](https://primer.style/components)
 
 ---
@@ -50,7 +54,7 @@
 ## Milestones
 
 -   M1 : Project Setup and Basic API Integration
--   M2 : Model Serving and Monitoring Integration
+-   M2 : Deployment & ML Model Integration
 -   M3 : Visualization, Alerts, and Finalization
 
 ---
@@ -64,28 +68,34 @@
 -   **Issues** : [task-1-setup](https://github.com/ld5ehom/recommend-backend/tree/task-1-setup)
 -   **Details** :
 
-    -   Initial project setup and model annotation ->
+    -   Initial project setup and model annotation -> [ae8b533](https://github.com/ld5ehom/recommend-backend/commit/ae8b533174bc9add5e90ed29bd6b7775a8c655d0)
         -   Set up MySQL connection, configured DBeaver access, renamed tables under unified schema, and added structured docstrings and bilingual comments to database models and user schemas.
 
 **Task 2. API Endpoint Implementation**
 
+-   **Issues** : [task-2-api](https://github.com/ld5ehom/recommend-backend/tree/task-2-api)
+-   **Details** :
+    -   Add user login and signup with JWT auth ->
+        -   Implemented user authentication system including signup and login endpoints, JWT-based access token issuance, password hashing, and database integration using FastAPI and SQLAlchemy.
+
 ---
 
-### Milestone 2: Model Serving and Monitoring Integration
+### Milestone 2: Deployment & ML Model Integration
 
 **Task 3. Testing and Deployment Pipeline**
 
-**Task 4. ML Model Serving Overview**
+-   **Issues** : [task-3-deploy](https://github.com/ld5ehom/recommend-backend/tree/task-3-deploy)
+-   **Details** :
 
-**Task 5. ML Model API Integration**
+**Task 4. ML Model API Integration**
 
 ### Milestone 3: Visualization, Alerts, and Finalization
 
-**Task 6. Prometheus Integration**
+**Task 5. Prometheus Integration**
 
-**Task 7. Grafana Dashboard Setup**
+**Task 6. Grafana Dashboard Setup**
 
-**Task 8. Alerting & Final Alarms**
+**Task 7. Alerting & Final Alarms**
 
 ---
 
@@ -100,7 +110,7 @@ python3 -m venv venv
 -   **Activate the virtual environment (Mac/Linux) | 가상환경 활성화 (Mac/Linux)**
 
 ```
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 -   **Install dependencies from requirements.txt | requirements.txt 기반 의존성 설치**

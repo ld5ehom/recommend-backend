@@ -8,7 +8,6 @@ Used for data validation and serialization of user info in API endpoints.
 사용자 관련 데이터 모델을 위한 Pydantic 스키마 정의.
 API에서 사용자 정보의 유효성 검사 및 직렬화에 사용됨.
 """
-
 # Base user schema with common user fields
 # 공통 사용자 필드를 포함하는 기본 스키마
 class UserBase(BaseModel):
