@@ -1,4 +1,4 @@
-# Store Recommendations System (Backend)
+# Store Management and Recommendation System (Backend)
 
 ## Project Overview
 
@@ -75,8 +75,10 @@
 
 -   **Issues** : [task-2-api](https://github.com/ld5ehom/recommend-backend/tree/task-2-api)
 -   **Details** :
-    -   Add user login and signup with JWT auth ->
+    -   Add user login and signup with JWT auth -> [3af69a6](https://github.com/ld5ehom/recommend-backend/commit/3af69a65c7a8dc253867fe80bec3ff878b8e9844)
         -   Implemented user authentication system including signup and login endpoints, JWT-based access token issuance, password hashing, and database integration using FastAPI and SQLAlchemy.
+    -   Implemented user-related features ->
+        -   Developed user-related endpoints and services including profile update, follow/unfollow, and user lookup using FastAPI with OAuth2 authentication and SQLAlchemy, along with modular router/service integration and test-ready batch user creation.
 
 ---
 
