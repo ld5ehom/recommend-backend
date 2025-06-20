@@ -13,7 +13,7 @@ used for displaying content previews, links, and metadata in the system.
 """
 
 class Article(Base):
-    __tablename__ = "fdc_articles"  # Table name in the database
+    __tablename__ = "articles"  # Table name in the database
 
     # Primary key for the article (아티클의 기본 키)
     id = Column(BigInteger, primary_key=True, nullable=False, autoincrement=True)

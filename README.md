@@ -77,8 +77,10 @@
 -   **Details** :
     -   Add user login and signup with JWT auth -> [3af69a6](https://github.com/ld5ehom/recommend-backend/commit/3af69a65c7a8dc253867fe80bec3ff878b8e9844)
         -   Implemented user authentication system including signup and login endpoints, JWT-based access token issuance, password hashing, and database integration using FastAPI and SQLAlchemy.
-    -   Implemented user-related features ->
+    -   Implemented user-related features -> [8fa702e](https://github.com/ld5ehom/recommend-backend/commit/8fa702e35cb88206bea60a76cd2ad556d44b7a13)
         -   Developed user-related endpoints and services including profile update, follow/unfollow, and user lookup using FastAPI with OAuth2 authentication and SQLAlchemy, along with modular router/service integration and test-ready batch user creation.
+    -   Article Feature Implementation
+        -   Implemented core article features including listing with pagination and sorting options, and fetching individual articles by ID, using FastAPI routing, SQLAlchemy queries, and modular service-router architecture for maintainability.
 
 ---
 

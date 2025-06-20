@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 from src.routers.index_router import router as index_router
 from src.routers.users_router import router as users_router
+from src.routers.articles_router import router as articles_router
 
 """
 Creates the FastAPI app instance with custom title and OpenAPI tags.
@@ -14,3 +15,4 @@ app = FastAPI(
 
 app.include_router(index_router)
 app.include_router(users_router, prefix="/users")
+app.include_router(articles_router, prefix="/articles")
