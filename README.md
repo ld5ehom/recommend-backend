@@ -69,7 +69,7 @@
 -   **Details** :
 
     -   Initial project setup and model annotation -> [ae8b533](https://github.com/ld5ehom/recommend-backend/commit/ae8b533174bc9add5e90ed29bd6b7775a8c655d0)
-        -   Set up MySQL connection, configured DBeaver access, renamed tables under unified schema, and added structured docstrings and bilingual comments to database models and user schemas.
+        -   Set up MySQL connection and verified access through DBeaver. Defined initial SQLAlchemy models and schemas for core user and restaurant-related entities. Added structured docstrings for maintainability and consistency across database models.
 
 **Task 2. API Endpoint Implementation**
 
@@ -79,8 +79,13 @@
         -   Implemented user authentication system including signup and login endpoints, JWT-based access token issuance, password hashing, and database integration using FastAPI and SQLAlchemy.
     -   Implemented user-related features -> [8fa702e](https://github.com/ld5ehom/recommend-backend/commit/8fa702e35cb88206bea60a76cd2ad556d44b7a13)
         -   Developed user-related endpoints and services including profile update, follow/unfollow, and user lookup using FastAPI with OAuth2 authentication and SQLAlchemy, along with modular router/service integration and test-ready batch user creation.
-    -   Article Feature Implementation
+    -   Article Feature Implementation -> [461184f](https://github.com/ld5ehom/recommend-backend/commit/461184f91436bdadd27688e333bffac10f0b4a47)
         -   Implemented core article features including listing with pagination and sorting options, and fetching individual articles by ID, using FastAPI routing, SQLAlchemy queries, and modular service-router architecture for maintainability.
+    -   Implement restaurant feature: schema, model, and relationship mappings ->
+        -   Developed core restaurant functionalities including full schema definitions for restaurant creation, update, and search. Implemented SQLAlchemy models for Restaurant, Tag, Keyword, CuisineType, and their respective category models (TagCategory, CuisineTypeCategory).
+        -   Established many-to-many mappings such as RestaurantTag, RestaurantKeyword, and RestaurantCuisineType.
+        -   Added blog review and review models with schema integration.
+        -   Ensured complete bidirectional relationships across models and Pydantic schemas to support FastAPI routing, dependency injection, and modular querying.
 
 ---
 

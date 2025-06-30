@@ -13,7 +13,7 @@ Each row connects a restaurant to one tag, allowing many-to-many relationships.
 
 # Association table linking Restaurant and Tag in many-to-many relationship
 # 다대다 관계를 위한 Restaurant와 Tag 간의 연결 테이블
-class RestaruantTag(Base):
+class RestaurantTag(Base):
     __tablename__ = 'restaurant_has_tags'
 
     id = Column(BigInteger, primary_key=True, autoincrement=True)
