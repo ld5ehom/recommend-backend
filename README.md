@@ -65,23 +65,23 @@
 
 **Task 1. Project Setup & DB Modeling**
 
--   **Issues** : [task-1-setup](https://github.com/ld5ehom/recommend-backend/tree/task-1-setup)
+-   **Issues** : [task-1-setup](https://github.com/ld5ehom/store-backend/tree/task-1-setup)
 -   **Details** :
 
-    -   Initial project setup and model annotation -> [ae8b533](https://github.com/ld5ehom/recommend-backend/commit/ae8b533174bc9add5e90ed29bd6b7775a8c655d0)
+    -   Initial project setup and model annotation -> [ae8b533](https://github.com/ld5ehom/store-backend/commit/ae8b533174bc9add5e90ed29bd6b7775a8c655d0)
         -   Set up MySQL connection and verified access through DBeaver. Defined initial SQLAlchemy models and schemas for core user and restaurant-related entities. Added structured docstrings for maintainability and consistency across database models.
 
 **Task 2. API Endpoint Implementation**
 
--   **Issues** : [task-2-api](https://github.com/ld5ehom/recommend-backend/tree/task-2-api)
+-   **Issues** : [task-2-api](https://github.com/ld5ehom/store-backend/tree/task-2-api)
 -   **Details** :
-    -   Add user login and signup with JWT auth -> [3af69a6](https://github.com/ld5ehom/recommend-backend/commit/3af69a65c7a8dc253867fe80bec3ff878b8e9844)
+    -   Add user login and signup with JWT auth -> [3af69a6](https://github.com/ld5ehom/store-backend/commit/3af69a65c7a8dc253867fe80bec3ff878b8e9844)
         -   Implemented user authentication system including signup and login endpoints, JWT-based access token issuance, password hashing, and database integration using FastAPI and SQLAlchemy.
-    -   Implemented user-related features -> [8fa702e](https://github.com/ld5ehom/recommend-backend/commit/8fa702e35cb88206bea60a76cd2ad556d44b7a13)
+    -   Implemented user-related features -> [8fa702e](https://github.com/ld5ehom/store-backend/commit/8fa702e35cb88206bea60a76cd2ad556d44b7a13)
         -   Developed user-related endpoints and services including profile update, follow/unfollow, and user lookup using FastAPI with OAuth2 authentication and SQLAlchemy, along with modular router/service integration and test-ready batch user creation.
-    -   Article Feature Implementation -> [461184f](https://github.com/ld5ehom/recommend-backend/commit/461184f91436bdadd27688e333bffac10f0b4a47)
+    -   Article Feature Implementation -> [461184f](https://github.com/ld5ehom/store-backend/commit/461184f91436bdadd27688e333bffac10f0b4a47)
         -   Implemented core article features including listing with pagination and sorting options, and fetching individual articles by ID, using FastAPI routing, SQLAlchemy queries, and modular service-router architecture for maintainability.
-    -   Implement restaurant feature: schema, model, and relationship mappings ->
+    -   Implement restaurant feature: schema, model, and relationship mappings -> [020c9e4](https://github.com/ld5ehom/store-backend/commit/020c9e4b0a5c3e1a2b3c4f63aa237d8a42e3b42f)
         -   Developed core restaurant functionalities including full schema definitions for restaurant creation, update, and search. Implemented SQLAlchemy models for Restaurant, Tag, Keyword, CuisineType, and their respective category models (TagCategory, CuisineTypeCategory).
         -   Established many-to-many mappings such as RestaurantTag, RestaurantKeyword, and RestaurantCuisineType.
         -   Added blog review and review models with schema integration.
@@ -93,8 +93,10 @@
 
 **Task 3. Testing and Deployment Pipeline**
 
--   **Issues** : [task-3-deploy](https://github.com/ld5ehom/recommend-backend/tree/task-3-deploy)
+-   **Issues** : [task-3-test](https://github.com/ld5ehom/store-backend/tree/task-3-test)
 -   **Details** :
+    -   **Add article retrieval test cases**
+        -   Implemented test_read_article and test_read_nonexistent_article using FastAPI TestClient to verify successful retrieval of a specific article and proper 404 handling for non-existent articles.
 
 **Task 4. ML Model API Integration**
 
@@ -142,4 +144,24 @@ python main.py
 
 ```
 python mock_main.py
+```
+
+## Test
+
+```
+PYTHONPATH=. pytest
+```
+
+## Docker
+
+```
+docker login
+```
+
+```
+docker compose up -d --build
+```
+
+```
+docker compose down
 ```
