@@ -1,0 +1,14 @@
+# version: "3"
+services:
+    store-api:
+        container_name: store-api
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        env_file:
+            - ./src/.env
+        volumes:
+            - ./src:/home/app/src
+        ports:
+            - 8000:80
+        command: uvicorn src.app:app --port 80 --host 0.0.0.0 --reload
