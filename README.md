@@ -100,6 +100,11 @@
 
 **Task 4. ML Model API Integration**
 
+-   **Issues** : [task-4-ml](https://github.com/ld5ehom/store-backend/tree/task-4-ml)
+-   **Details** :
+    -   **Implement ML API endpoint**
+        -   Implement ML API endpoint for cuisine prediction based on weather data with test coverage.
+
 ### Milestone 3: Visualization, Alerts, and Finalization
 
 **Task 5. Prometheus Integration**
@@ -115,7 +120,7 @@
 -   **Create a virtual environment | 가상환경 생성**
 
 ```
-python3 -m venv venv
+python3 -m venv .venv
 ```
 
 -   **Activate the virtual environment (Mac/Linux) | 가상환경 활성화 (Mac/Linux)**
@@ -128,6 +133,12 @@ source .venv/bin/activate
 
 ```
 pip install -r requirements.txt
+```
+
+-   **Save requirements.txt**
+
+```
+pip freeze > requirements.txt
 ```
 
 ---
