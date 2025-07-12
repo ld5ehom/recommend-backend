@@ -1,4 +1,4 @@
-# EC2
+## Docker
 
 ```
 docker login
@@ -8,7 +8,7 @@ docker login
 docker compose up -d --build
 ```
 
-# Docker down
+## Logout
 
 ```
 docker compose down
