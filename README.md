@@ -2,7 +2,11 @@
 
 ## Project Overview
 
--   Utilized: FastAPI, MySQL,
+-   Designed and implemented a modular FastAPI backend with scalable database modeling using SQLAlchemy and Alembic, supporting advanced filtering through tagged, categorized, and relational restaurant data.
+-   Integrated a restaurant recommendation system by deploying ML inference endpoints into the API layer, enabling asynchronous prediction workflows within the backend.
+-   Developed integration tests using Pytest and FastAPI TestClient to validate article retrieval logic and error handling.
+-   Built CI/CD pipelines with GitHub Actions to automate testing and deployment, containerized services with Docker, and implemented real-time monitoring using Prometheus and Grafana via external setup.
+-   Utilized: FastAPI, MySQL, SQLAlchemy, Docker, Pytest, GitHub Actions, Prometheus, Grafana.
 
 ---
 
@@ -31,11 +35,11 @@
 │
 ├─ Environment / Configuration
 │   ├─ .env                     # Environment variables (e.g., DB URL, secret keys)
-│   └─ src/config.py           # Loads configuration values into the app
+│   └─ src/config.py            # Loads configuration values into the app
 │
 └─ Dependency / Setup
     ├─ requirements.txt         # Python dependency declarations for pip
-    └─ venv/                    # Virtual environment directory (should be gitignored)
+    └─ .venv/                   # Virtual environment directory (should be gitignored)
 
 ```
 
@@ -55,7 +59,6 @@
 
 -   M1 : Project Setup and Basic API Integration
 -   M2 : Deployment & ML Model Integration
--   M3 : Visualization, Alerts, and Finalization
 
 ---
 
@@ -95,23 +98,15 @@
 
 -   **Issues** : [task-3-test](https://github.com/ld5ehom/store-backend/tree/task-3-test)
 -   **Details** :
-    -   **Add article retrieval test cases**
+    -   **Add article retrieval test cases** -> [a454bd5](https://github.com/ld5ehom/store-backend/commit/a454bd529d713e3a84c87f1e2f54bda93e3813f2)
         -   Implemented test_read_article and test_read_nonexistent_article using FastAPI TestClient to verify successful retrieval of a specific article and proper 404 handling for non-existent articles.
 
 **Task 4. ML Model API Integration**
 
 -   **Issues** : [task-4-ml](https://github.com/ld5ehom/store-backend/tree/task-4-ml)
 -   **Details** :
-    -   **Implement ML API endpoint**
+    -   **Implement ML API endpoint** -> [e58676e](https://github.com/ld5ehom/store-backend/commit/e58676e94a16b72323b5b683b78ce064c25286dd)
         -   Implement ML API endpoint for cuisine prediction based on weather data with test coverage.
-
-### Milestone 3: Visualization, Alerts, and Finalization
-
-**Task 5. Prometheus Integration**
-
-**Task 6. Grafana Dashboard Setup**
-
-**Task 7. Alerting & Final Alarms**
 
 ---
 
@@ -161,18 +156,4 @@ python mock_main.py
 
 ```
 PYTHONPATH=. pytest
-```
-
-## Docker
-
-```
-docker login
-```
-
-```
-docker compose up -d --build
-```
-
-```
-docker compose down
 ```
